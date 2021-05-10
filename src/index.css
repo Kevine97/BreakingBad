@@ -1,13 +1,170 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+:root {
+  --primary-white: #ffffff;
+  --primary-light-grey: #f4f4f4;
+  --primary-grey: #ccd1d9;
+  --primary-dark-grey: #666666;
+  --primary-orange: #f9ab00;
+  --primary-dark: rgb(52, 58, 64);
+  --primary-red: #ef4035;
+  --primary-hover-red: #f33501;
+  --primary-black: #040404;
+  --primary-transparent-black: rgba(0, 0, 0, 0.7);
+  --primary-green: green;
+  --primary-component: #18d26e;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto Condensed", sans-serif !important;
+  background: #040404 !important;
+  
+  color: #fff !important;
+}
+
+.colorSpinner {
+  background: var(--primary-black) !important;
+}
+/********************************** spinner******************************/
+.spinner-div {
+  background-color: var(--primary-black) 0 !important;
+  z-index: 999;
+}
+.spinner {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite;
+  position: absolute; /* cambiamos de fixed a absolute */
+  /* Ponemos el valor de left, bottom, right y top en 0 */
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  margin: auto; /* Centramos vertical y horizontalmente */
+  z-index: 999;
+}
+
+.spinner > div {
+  height: 100%;
+  width: 6px;
+  background: var(--primary-component);
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+  }
+}
+
+.page-wrap {
+  min-height: 100vh;
+}
+
+.btn-main-cv {
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: var(--primary-component);
+  border-radius: 0;
+  padding: 0.75rem 2rem 0.75rem 2rem;
+  color: #fff;
+}
+
+.btn-main-cv:hover {
+  text-decoration: none;
+  background-color: var(--primary-component);
+  color: #fff;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.spinner-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.line-mf {
+  width: 40px;
+  height: 5px;
+  background-color: var(--primary-component) !important;
+  margin: 0 auto;
+}
+
+.hola {
+  margin-top: 10rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.color-author, .fas {
+  color: var(--primary-component);
+
+}
+
+.quote {
+  font-size: 30px;
+  
+}
+@media (max-width: 768px) {
+  .hola {
+    margin-top: 0 !important;
+    margin-bottom: 0.5 !important;
+  }
+
+  .quote {
+    font-size: 20px;
+    
+  }
+  
 }
