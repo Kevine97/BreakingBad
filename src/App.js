@@ -26,7 +26,7 @@ function App() {
           <div className="d-flex justify-content-center ">
             <div className="row mt-5">
               <blockquote className="blockquote text-right">
-                <p className=" quote"><i class="fas fa-quote-left mr-2"></i>{quote} <i class="fas fa-quote-right ml-2"></i></p>
+                <p className=" quote"><i className="fas fa-quote-left mr-2"></i>{quote} <i className="fas fa-quote-right ml-2"></i></p>
                 <footer className="blockquote-footer color-author">{author}</footer>
               </blockquote>
             </div>

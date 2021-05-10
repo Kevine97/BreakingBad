@@ -7,7 +7,6 @@ const useCounter = (initialState = 1) => {
     setCounter(initialState);
   }
 
-  console.log(counter);
 
   const increment = () => {
     setCounter(counter + 1);
