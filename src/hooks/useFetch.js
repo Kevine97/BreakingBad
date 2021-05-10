@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const useFetch = (url) => {
   const [api, getApi] = useState({
@@ -6,6 +6,14 @@ const useFetch = (url) => {
     loading: true,
     error: null,
   });
+
+  const isMounted = useRef(true);
+
+  useEffect(() => {
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
 
   useEffect(() => {
     getApi({
